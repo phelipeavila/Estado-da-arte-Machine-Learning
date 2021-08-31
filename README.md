@@ -5,25 +5,25 @@ Principais algoritmos de Machine Learning. Uma explicação detalhada de cada um
 
 ## Definição
 ## Principais algoritmos
-### [K-Nearest Neighbors e Linear Models](https://adotg.github.io/knn-what-how-why/)
-### [Naive Bayes Classifiers] ()
-### Decision Trees e Ensembles of Decisions Trees
-### Support Vector Machines
-### Neural Networks
+### [K-Nearest Neighbors e Linear Models](https://www.google.com/)
+### [Naive Bayes Classifiers](https://www.google.com/)
+### [Decision Trees e Ensembles of Decisions Trees](https://www.google.com/)
+### [Support Vector Machines](https://www.google.com/)
+### [Neural Networks](https://www.google.com/)
 
 # Algoritmos de aprendizado não supervisionado
 
 ## Definição
 ## Principais algoritmos
 ### [PCA e AutoEncoder (Redução de Dimensionalidade)](https://adotg.github.io/knn-what-how-why/)
-### [K-Means Clustering] ()
-### Agglomerative Clustering
+### [K-Means Clustering](https://www.google.com/)
+### [Agglomerative Clustering](https://www.google.com/)
 
 # Deep Learning
 ## Definição
 ## Principais algoritmos
-### Redes Neurais Profundas
-### Processamento de Linguagem Natural
+### [Redes Neurais Profundas](https://www.google.com/)
+### [Processamento de Linguagem Natural](https://www.google.com/)
 
 
 ## Este repositório é mantido por:
