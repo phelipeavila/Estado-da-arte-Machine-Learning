@@ -5,7 +5,7 @@ Principais algoritmos de Machine Learning. Uma explicação detalhada de cada um
 
 ## Definição
 ## Principais algoritmos
-### [K-Nearest Neighbors e Linear Models](https://www.google.com/)
+### [K-Nearest Neighbors e Linear Models](KNN-and-linear-models)
 ### [Naive Bayes Classifiers](https://www.google.com/)
 ### [Decision Trees e Ensembles of Decisions Trees](https://www.google.com/)
 ### [Support Vector Machines](https://www.google.com/)
