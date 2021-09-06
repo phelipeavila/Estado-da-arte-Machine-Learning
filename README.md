@@ -23,7 +23,7 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 
 ## Principais algoritmos
 - [Modelos Lineares](Linear-Models)
-- [K-Nearest Neighbors e Linear Models](k-nearest-neighbors)
+- [K-Nearest Neighbors](k-nearest-neighbors)
 - [Naive Bayes Classifiers](NaiveBayesClassifiers)
 - [Decision Trees e Ensembles of Decisions Trees](https://www.google.com/)
 - [Support Vector Machines](https://www.google.com/)
