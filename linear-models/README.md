@@ -1,5 +1,5 @@
 # Modelos Lineares
-Principais algoritmos de Machine Learning. Uma explicação detalhada de cada um deles, como como funcionam, para quais problemas cada um deles é indicado.
+O modelo linear é uma dos modelos mais usados na estatística e, por isso, também é um dos modelos mais importantes no aprendizado de máquina.
 
 
 ## Conceito (O que é? Pra que serve?)
