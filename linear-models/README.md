@@ -13,7 +13,7 @@ No caso do exemplo acima, temos uma Regressão Linear Simples, em que somente um
 
 <div>
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;\dpi{150}&space;\bg_white&space;\[f(X) = w_{0} + w_{1} * x_{1}\]" > 
-<div/>
+</div>
 
 Onde ***w<sub>0</sub>*** representa o ponto inicial da reta e ***w<sub>1</sub>*** representa a inclinação da reta. Esses são parâmetros que o algoritmo utiliza para definir a reta. Dessa forma,  ***x<sub>1</sub>*** representa o atributo de entrada que foi dada ao modelo. E com esses valores ele consegue fazer as previsões.
 
