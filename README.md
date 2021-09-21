@@ -2,9 +2,16 @@
 Principais algoritmos de Machine Learning. Uma explicação detalhada de cada um deles, como como funcionam, para quais problemas cada um deles é indicado.
 
 
-### **o que é aprendizado de máquina**
-### **o que é um modelo**
-### **modelos de classificação e regressão**
+### **O que é aprendizado de máquina**
+Algoritmos de *machine learning* permitem que computadores "aprendam" padrões a partir de dados. E somente pela análise desses dados. O aprendizado de páquina é extremamente baseado em estatística, que é extremamente importante em diversas áreas da ciência, finanças e indústria. 
+
+Através da análise de dados históricos, é possível prever o comportamentos e resolver problemas complexos, tais como: prever o preço de ações daqui uma semana, identificar letras e números manuscritos ou mesmo identificar pessoas com maior risco de desenvolver doenças.
+
+Em um cenário típico, o algoritmo de aprendizado retorna uma saída quantitativa ou qualitativa que queremos prever baseado em diversas características. Temos também uma base de dados de treinamento, que possui as características de entrada e saídas correspondentes. É com base nesses dados que o algoritmo será treinado para aprender o problema e realizar as predições.
+
+
+### **O que é um modelo**
+### **Modelos de classificação e regressão**
 Se analizarmos diferentes exemplos de modelos de predição, podemos perceber que a saída desses modelos pode ser bem diferente. Um dos exemplos mais famosos é o modelo [flor de Iris (ou Iris de Fisher)](https://www.kaggle.com/arshid/iris-flower-dataset), em que o algoritmo determina a espécie das flores utilizando características físicas delas para isso. Nesse modelo, a saída o algoritmo é *qualitativa* (a espécie da Iris) e sempre será um dos valores do grupo *G = {setosa, virginca, versicolor}*. 
 
 Nesse exemplo, não há uma categoria maior que outra, ou seja, elas não são ordenáveis. Porém, se analizarmos o [exemplo de predição de glicose](https://www.kaggle.com/houcembenmansour/predict-diabetes-based-on-diagnostic-measures), a saída é uma medida *quantitativa*, em que os valores podem ser ordenados.
@@ -31,24 +38,21 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 
 # Algoritmos de aprendizado não supervisionado
 
-## Definição
-## Principais algoritmos
+### Principais algoritmos
 - [PCA e AutoEncoder (Redução de Dimensionalidade)](https://adotg.github.io/knn-what-how-why/)
 - [K-Means Clustering](https://www.google.com/)
 - [Agglomerative Clustering](https://www.google.com/)
 
 # Deep Learning
-## Definição
-## Principais algoritmos
+### Principais algoritmos
 - [Redes Neurais Profundas](https://www.google.com/)
 - [Processamento de Linguagem Natural](https://www.google.com/)
 
 
-## Este repositório é mantido por:
+### Este repositório é mantido por:
 
 [João Pedro](https://medium.com/)
 
 [João Victor](https://medium.com/)
 
 [Phelipe Ávila](https://www.linkedin.com/in/phelipeavila/)
-
