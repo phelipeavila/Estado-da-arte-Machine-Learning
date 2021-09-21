@@ -33,7 +33,7 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 # Algoritmos de aprendizado supervisionado
 
 ## Principais algoritmos
-- [Modelos Lineares](Linear-Models)
+- [Modelos Lineares](linear-models)
 - [K-Nearest Neighbors](k-nearest-neighbors)
 - [Naive Bayes Classifiers](NaiveBayesClassifiers)
 - [Decision Trees e Ensembles of Decisions Trees](Decision-Trees-e-Ensembles-of-Decisions-Trees)
