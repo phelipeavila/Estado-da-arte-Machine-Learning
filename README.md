@@ -11,6 +11,10 @@ Em um cenário típico, o algoritmo de aprendizado retorna uma saída quantitati
 
 
 ### **O que é um modelo**
+Um modelo de *machine learning* é um algoritmo parametrizado (treinado) para reconhecer padrões de uma base de dados (dataset). Um modelo também pode ser treinado a partir da combinação de diferentes algoritmos de forma a conseguir um resultado mais preciso.
+
+Por exemplo, podemos criar um modelo para reconhecer caracteres manuscritos. Para isso, passamos uma base de imagens de caracteres manuscritos e informamos qual caractere aquela imagem representa. Dessa forma o modelo será treinado para reconhecer o padrão para cada caractere e, ao receber uma nova imagem, irá utilizar o padrão aprendido para prever o caractere correspondente.
+
 ### **Modelos de classificação e regressão**
 Se analizarmos diferentes exemplos de modelos de predição, podemos perceber que a saída desses modelos pode ser bem diferente. Um dos exemplos mais famosos é o modelo [flor de Iris (ou Iris de Fisher)](https://www.kaggle.com/arshid/iris-flower-dataset), em que o algoritmo determina a espécie das flores utilizando características físicas delas para isso. Nesse modelo, a saída o algoritmo é *qualitativa* (a espécie da Iris) e sempre será um dos valores do grupo *G = {setosa, virginca, versicolor}*. 
 
@@ -51,8 +55,8 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 
 ### Este repositório é mantido por:
 
-[João Pedro](https://medium.com/)
+[João Pedro](https://www.linkedin.com/)
 
-[João Victor](https://medium.com/)
+[João Victor](https://www.linkedin.com/)
 
 [Phelipe Ávila](https://www.linkedin.com/in/phelipeavila/)
