@@ -25,7 +25,7 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 - [Modelos Lineares](Linear-Models)
 - [K-Nearest Neighbors](k-nearest-neighbors)
 - [Naive Bayes Classifiers](NaiveBayesClassifiers)
-- [Decision Trees e Ensembles of Decisions Trees](https://www.google.com/)
+- [Decision Trees e Ensembles of Decisions Trees](Decision-Trees-e-Ensembles-of-Decisions-Trees)
 - [Support Vector Machines](https://www.google.com/)
 - [Neural Networks](https://www.google.com/)
 
