@@ -1,8 +1,7 @@
 # Naive Bayes Classifiers
 
 
-
-### Funcionamento
+## Funcionamento
 
 Cria uma tabela de probabilidade de algo ocorrer, baseado nas informações que temos no nosso dataset. 
 Tenho um dataset falando na inadiplencia de pessoas e tenho dados como salario, balanço patrimonial, bens pessoais para garantia e as informações sobre qual foi o risco associado previamente a cada pessoa.
@@ -42,16 +41,49 @@ Vemos vantagens nessa abordagem em problemas que trabalhamos com ocorrencia de d
 
 ## Definição Teórica e Modelagem Matemática
 
-A modelagem matematica se baseia em pegar a probabilidade de algo acontecer e aprobabilidade de algo não acontecer. Depois disso, há uma multiplicação dessa probabilidade de acontecer pelas ocorrencias em caso positivo e negativo.
+No teorema de Bayes vemos que:
+
+<div>
+<img src="Naive-bayes.jpg">
+</div>
+
+Em que calculamos:
+
+*   P (B|A) = Essa é a probabilidade condicional que temos conhecimento. Portanto temos: qual a probabilidade de B acontecer dado que A acontece.
+*   P (A) = Probabilidade de A acontecer
+*   P (B) = Probabilidade de B acontecer
+*   P (A|B) = Essa é a nossa probabilidade condicional que queremos. Essa é inversa a que temos dados. 
+
+Para exemplificar: No teorema teriamos a probabilidade de ir pescar, sabendo das chances de chuva. E no caso, usando essa fórmula, vamos ter a probabilidade de ter chovido, sabendo que a pessoa foi pescar.
+
+Quando vamos para o algoritmo de machine learning de Naive Bayes temos a comparação de P (A|B) para os casos positivos e negativos e depois fazemos uma comparação entre as probabilidades.
+Então temos: 
+*   A probabilidade para ter ido pescar em caso de:
+    *   chuva
+    *   Sem chuva.
+*   E a probabilidade de não ter ido pescar sabendo dos casos de:
+    *   chuva
+    *   Sem chuva
+  
+Nesse exemplo já teriamos uma tabela que com as probabilidades condicionais dadas as situações. Em um caso de aplicação, poderiamos ter mais uma condicional, como o lago estar com nível de água cheio e vazio. E apartir disso, iriamos calcular a condicional P(B|A) composta com a informação do nível do lago e ir ou não pescar.
+
 Vamos a um exemplo:
-De 10 emails 7 não são spam e 3 são spam.
-Desses emails que não são spam há uma ocorrencia de ter as palavras como 'amigo' e 'querido' maior que nós emails que são spam.
-No caso dos emails que são spam, temos uma ocorrencia maior de palavras como 'oportunidade' e 'vantagem'.
-Nesse caso, há uma conta que a probabilidade geral de um email não ser spam é de 70% e 30% de ser spam.
-Depois calcula quantas vezes apareceu as palavras 'amigo', 'querido', 'oportunidade', 'vantagem' tanto nos casos de ser spam e não ser. 
-E por último há uma multiplicação da probabilidade de ser spam, com as probabilidade de aparecer cada palavra.
+
+*   De 10 emails 7 não são spam e 3 são spam.
+*   Nesse caso, há uma conta que a probabilidade geral de um email não ser spam é de 70% e 30% de ser spam.
+---
+*   Desses emails que não são spam há uma ocorrencia maior das palavras 'amigo' e 'querido'
+*   No caso dos emails que são spam, temos uma ocorrencia maior das palavras 'oportunidade' e 'vantagem'.
+---
+*   Depois calcula quantas vezes apareceu as palavras 'amigo', 'querido', 'oportunidade', 'vantagem' tanto nos casos de ser spam e não ser. 
+*   E por último há uma multiplicação da probabilidade de ser spam, com as probabilidade de aparecer cada palavra.
+---
 Ex: 70% de probabilidade de não ser spam X 20% de probabilidade de aparecer 'vantagem' X 10% de probabilidade de aparecer 'oportunidade';
-Com isso, teremos um percentual final para essa combinação de palavras para um e-mail que não é spam. Fariamos o memso para o caso de ser spam. E chegariamos em valores de probabilidade de um e-mail com essa combinação de palavras ser spam.
+
+Com isso, teremos um percentual final para essa combinação de palavras para um e-mail que não é spam. Fariamos o memso para o caso de ser spam. E chegariamos em valores de probabilidade de um e-mail com essa combinação de palavras ser spam ou não. 
+
+Vale ressaltar que se a gente tiver nenhuma ocorrencia, teriamos uma multiplicação por zero e consequentemente a probabilidade final seria nula. Isso não acontece na realidade, pois se uma variavel por um indice muito forte, ela precisa mostrar uma probabilidade. Portanto para fazer o equilibrio dessas probabilidades condicionais, o algoritmo acrescenta 1 ocorrencia para cada situação. 
+Em um exemplo, seria como se em um e-mail de spam 100% das vezes aparecesse a palavra 'download' mas a palavra 'querido' tivesse aparecido nenhuma vez até então. A probabilidade de ser spam seria zero, por causa da palavra 'querido'. Mas ao adicionar 1 para todas as ocorrencias, teriamos um balanceamento, sendo assim o e-mail com a combinação de palavras 'querido' e 'download' teria uma probabilidade de ser spam. 
 
 ## Vantagens e Desvantagens (limitações)
 
@@ -60,7 +92,7 @@ Com isso, teremos um percentual final para essa combinação de palavras para um
 
 ## Exemplo de uma aplicação em Python
 
-Aplicação usando sklearn:
+Aplicação em que verifica a probabilidade de um dado conjunto de dados ter uma saída usando naive bayes com a biblioteca sklearn:
 
 ```python:
 import numpy as np
@@ -79,4 +111,4 @@ GaussianNB()
 print(clf_pf.predict([[-0.8, -1]]))
 ```
 
-output esperado: [1] e [1]
+output esperado dessa predição: [1] e [1]

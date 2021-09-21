@@ -14,6 +14,8 @@ Essa árvore é generica, mas podemos querer tentar prever se uma pessoa iria so
 Nada mais é que uma metodologia de avaliar acontecimentos para chegar a uma conclusão. Porém a partir da árvore de decisões, temos algumas variações. E também precisamos avaliar qual a melhor ordem em que as perguntas aparecem.
 
 ## Classes de Problemas com melhores resultados
+
+
 ## Definição Teórica e Modelagem Matemática
 ## Vantagens e Desvantagens (limitações)
 ## Exemplo de uma aplicação em Python
