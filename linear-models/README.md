@@ -19,7 +19,7 @@ Onde ***w<sub>0</sub>*** representa o ponto inicial da reta e ***w<sub>1</sub>**
 
 O exemplo abaixo ilustra o resultado de uma Regressão Linear Múltipla, em que mais de uma variável independente é usada para fazer a predição.
 
-<img src="https://ichi.pro/assets/images/max/724/0*qq0yaecNRQiugnif.png" width="500" />
+<img src="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R5_Correlation-Regression/MultipleLinearRegression-Plane.png" width="500" />
 
 
 
