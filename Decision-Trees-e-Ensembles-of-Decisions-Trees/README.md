@@ -16,8 +16,7 @@ Nada mais é que uma metodologia de avaliar acontecimentos para chegar a uma con
 
 ## Classes de Problemas com melhores resultados
 
-
-
+Problemas que tem pouca mutação de dados, e que que o dataset não tenha muitos dados apresentam melhores resultados. Principalmente naqueles problemas que precisamos gerar uma visualização. Além de trabalhar bem com os datasets que não foram normalizados e tem falta ou inconsistencia em algumas partes.
 
 ## Definição Teórica e Modelagem Matemática
 
@@ -50,18 +49,18 @@ E esse processo se perdura para o restante da árvore.
 Além das árvores de decisões, temos as subclassificações do algoritmo em que faz a combinação de várias árvores para tentar prever melhor os resultados. São elas:
 
 *   Bootstrap aggregating
-    *   Tambem conhecido como Bagging, 
+    *   Tambem conhecido como Bagging, é uma tecnica geral de combinar diversas formas de predição. No caso especifico das árvores de decisão, estamos falando em criar diferentes árvores, cada uma com um subset do nosso dataset e depois atribuir a cada árvore o poder de 'voto'. Consequentemente, teremos uma maioria de votos por uma decisão que seria a decisão que o algoritmo toma como predição.
 *   Random forests
     *   Como foi mostrado anteriormente, o algoritmo usa os dados do nosso dataset para determinar quais serão os nós iniciais e qual informação será utilizada em cada nó, sempre se baseando no indice de Gini. Porém, no random forest, existe uma aleatoriadade na escolha das informações, gerando um subset que será usado para a criação da árvore de decisão. São criadas várias árvores, cada qual utilizando uma parte do dataset para ver o indice de Gini e montar a árvore. Essa aleatóriedade e multiplicidade nas árvores faz com que ele entregue bons resultados. Por isso, esse é um dos algoritmos mais utilizados e populares recentemente.
 *   Extremely Randomized Trees
-    *   
+    *  Como comentado anteriormente, as árvores de decisão seguem uma conta matemática para decidir qual nó ficará em qual posição. Nesse caso, o 'extreme' é causado pelos nós terem sua ordem escolhida de forma aleatória.  Do ponto de vista de utilização de processamento e poder computacional ela é mais eficiente por não gerar tantas contas para decidir a sequencia de cada nó para cada uma das árvores. 
 
 
 
 ## Vantagens e Desvantagens (limitações)
 
 Algumas vantagens desse algoritmo é que ele é simples de implementar pois não demanda muito esforço do ponto de vista de preparação dos dados na fase pré processamento, o algoritmo é relativamente simples tecnicamente para poder entender e aplica-lo, além dos dados não precisarem ser normalizados. E a falta de algum dado na base não afeta de forma tão significativa quanto outros algoritmos. 
-Algumas desvantagens que temos é que o tempo de treinamento pode ser custoso do ponto de vista de recursos e tempo de treinamento a medida que a quantidade de dados aumenta. E também tem o fator que poucas alterações no nosso modelo de treinamento, pode causar grandes mudanças na estrutura e ordem das perguntas. E por causa do tempo de processamento seria inviável ficar fazendo novos treinamentos constantemente.
+Algumas desvantagens que temos é que o tempo de treinamento pode ser custoso do ponto de vista de recursos e tempo de treinamento a medida que a quantidade de dados aumenta. E também tem o fator que poucas alterações no nosso modelo de treinamento, pode causar grandes mudanças na estrutura e ordem das perguntas. E por causa do tempo de processamento seria inviável ficar fazendo novos treinamentos constantemente. E também pode acabar havendo um overfitting.
 
 ## Exemplo de uma aplicação em Python
 
@@ -129,7 +128,7 @@ print(data)
 ```
 
 
-#### Referências
+## Referências
 
 *   
 *   https://www.youtube.com/watch?v=_L39rN6gz7Y
@@ -138,4 +137,3 @@ print(data)
 *   https://medium.com/@ODSC/why-do-tree-ensembles-work-8dc1648327a3
 *   https://towardsdatascience.com/decision-trees-d07e0f420175
 *   https://dhirajkumarblog.medium.com/top-5-advantages-and-disadvantages-of-decision-tree-algorithm-428ebd199d9a
-*   
