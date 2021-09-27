@@ -47,7 +47,7 @@ Matematicamente, temos duas matrízes, as entradas provindas de sensores ou outr
 
 ## Vantagens e Desvantagens (limitações)
 
-    As vantagens desse algoritmo é os resultados precisos que ele proporciona, podendo ser para modelos preditivos, interpretação de imagens e textos.
+    As vantagens deste algoritmo é os resultados precisos que ele proporciona, podendo ser para modelos preditivos, interpretação de imagens e textos.
     E uma das desvantagens é a complexidade do treinamento dos modelos, além de que a análise de seus neurônios não resultam em um entendimento de como o modelo está resolvendo o problema.
 
 ## Exemplo de uma aplicação em Python
