@@ -35,3 +35,138 @@ Agora, se até para nós fica difícil de identificar e discernir ambiguidades, 
 
     As vantagens desse algoritmo é o aprendizado constante e a grande quantidade de dados que podem ser interpretados de uma vez em pouco tempo, sem ter pausas.
     E uma das desvantagens é a falta de otimização da interpretação de formas mais complexas de comunicação, como gírias, ambiguidades, ironias etc.
+
+## Exemplo de uma aplicação em Python
+
+Aplicação em que dada uma avaliação de um filme, dizer se ela é positiva ou negativa:
+
+```python:
+# Remoção de acentos
+
+import unidecode
+
+def utf8_to_ascii(text):
+    return unidecode.unidecode(text)
+
+# Remoção de tags HTML (<div>, <p>, <h1>, <br>)
+
+import re
+
+def delete_html_nodes(text):
+    regex = re.compile("<.+>")
+    
+    return re.sub(regex, "", text)
+
+# Tokenização "I thought this was" -> ["I", "thought", "this", "was"]
+
+import spacy
+
+def tokenize(corpus, deacc=True, trim_html=True, header="review"):
+    nlp = spacy.load("en_core_web_md")
+    
+    tokens = []
+    for index, row in corpus.iterrows():
+        document = row[header]
+        # remove accents
+        if deacc:
+            document = utf8_to_ascii(document)
+        
+        # remove HTML tags and its content
+        if trim_html:
+            document = delete_html_nodes(document)
+        
+        spacy_doc = nlp(document)
+        
+        tokens.append([token for token in spacy_doc])
+            
+    return tokens
+
+# Remoção de stop words (a, an, as, and, at, both, by, for, to)
+
+def remove_stop_words(corpus):
+    _tokens = []
+    index = -1
+    for document in corpus:
+        _tokens.append([])
+        index += 1
+        
+        for token in document:
+            if not token.is_stop:
+                _tokens[index].append(token)
+            
+    return _tokens
+
+# Lematização
+
+def lemmatize(corpus, remove_punct=True, remove_digits=True):
+    lemmatized = []
+    index = -1
+    for document in corpus:
+        lemmatized.append([])
+        index += 1
+        
+        for token in document:
+            # punctuation removal
+            if remove_punct and token.is_punct:
+                continue
+                
+            # digits removal
+            if remove_digits and token.is_digit:
+                continue
+
+            lemmatized[index].append(token.lemma_)
+            
+        lemmatized[index] = " ".join(lemmatized[index])
+        
+        
+    return lemmatized
+
+tokens = tokenize(
+        dataset,
+        deacc=True,
+        trim_html=True)
+
+no_stop_words = remove_stop_words(tokens)
+
+preprocessed_corpus = lemmatize(
+        no_stop_words,
+        remove_punct=True,
+        remove_digits=True)
+
+dataset.iloc[2, 0]
+
+preprocessed_corpus[2]
+
+labels = dataset.iloc[:, 1].map({"negative": 0, "positive": 1})
+
+# Extração de Características
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+tfidf_vectorizer = TfidfVectorizer()
+tfidf_vectorizer.fit(preprocessed_corpus)
+
+features_dataset = tfidf_vectorizer.transform(preprocessed_corpus)
+
+features_dataset.shape
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(features_dataset, labels, shuffle=False, random_state=42)
+
+print(X_train.shape, y_train.shape)
+
+print(X_test.shape, y_test.shape)
+
+# Criação do modelo
+
+rom sklearn.svm import SVC
+
+svm_model = SVC(probability=True)
+
+svm_model.fit(X_train, y_train)
+
+predictions = svm_model.predict(X_test)
+
+predictions
+```
