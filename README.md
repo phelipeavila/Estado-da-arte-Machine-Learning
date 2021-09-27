@@ -50,7 +50,7 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 # Deep Learning
 ### Principais algoritmos
 - [Redes Neurais Profundas](Redes-Neurais-Profundas)
-- [Processamento de Linguagem Natural](https://www.google.com/)
+- [Processamento de Linguagem Natural](processamento-de-linguagem-natural)
 
 
 ### Este repositório é mantido por:
