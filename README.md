@@ -37,15 +37,13 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 - [K-Nearest Neighbors](k-nearest-neighbors)
 - [Naive Bayes Classifiers](NaiveBayesClassifiers)
 - [Decision Trees e Ensembles of Decisions Trees](Decision-Trees-e-Ensembles-of-Decisions-Trees)
-- [Support Vector Machines](https://www.google.com/)
-- [Neural Networks](https://www.google.com/)
+
 
 # Algoritmos de aprendizado não supervisionado
 
 ### Principais algoritmos
-- [PCA e AutoEncoder (Redução de Dimensionalidade)](https://adotg.github.io/knn-what-how-why/)
-- [K-Means Clustering](https://www.google.com/)
-- [Agglomerative Clustering](https://www.google.com/)
+- [K-Means Clustering](K-MeansClustering)
+- [Agglomerative Clustering](AgglomerativeClustering)
 
 # Deep Learning
 ### Principais algoritmos
@@ -55,7 +53,7 @@ Variáveis de entrada geralmente são representadas pelo símbolo ***X***. Se **
 
 ### Este repositório é mantido por:
 
-[João Pedro](https://www.linkedin.com/)
+[João Pedro](https://www.linkedin.com/in/joaopedrogfmattos/)
 
 [João Victor](https://www.linkedin.com/in/jvictor-antonucci/)
 
